@@ -11,10 +11,12 @@ let homeDir = FileManager.default.homeDirectoryForCurrentUser
 let dir = "Library/LaunchAgents"
 let fileName = "com.local.KeyRemapping.plist"
 
+// Create a file in the LaunchAgents directory, which will be executed when the system starts
 let url = homeDir
     .appending(path: dir)
     .appending(path: fileName)
 
+// The key mapping relationship is defined here, you can modify it according to your needs
 let keyMap: KeyMap = [
     .capsLock: .deleteOrBackspace,
     .deleteOrBackspace: .deleteForward,
